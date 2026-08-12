@@ -1,0 +1,187 @@
+%=============================================================================
+% LATEX STUFF
+% ============================================================================
+\PassOptionsToPackage{table}{xcolor} % Enables colored tables cleanly
+\documentclass{beamer}
+
+\usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
+\geometry{paperwidth=36in,paperheight=48in}
+
+%=============================================================================
+% OTHER PACKAGES
+% ============================================================================
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs} % Elegant tables
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{relsize}
+
+%=============================================================================
+% POSTER METADATA
+% ============================================================================
+\def\postertitle {Beyond Static Benchmarks: A Post-Leaderboard Evaluation Paradigm for Generative Music and Creative AI}
+\def\posterauthor {Alexander Lerch}
+\def\posteraffiliation {Music Informatics Group, Georgia Institute of Technology}
+\def\posteraffiliationlink {\href{http://www.musicinformatics.org}{www.musicinformatics.org}}
+\def\postercontactlink {\href{mailto:alexander.lerch@gatech.edu}{alexander.lerch@gatech.edu}}
+
+%=============================================================================
+% LAYOUT DEFINITIONS IN SEPARATE FILE
+% ============================================================================
+\input{layout}
+
+
+% =============================================================================
+% MAIN POSTER CONTENT
+% =============================================================================
+\begin{document}
+\begin{frame}[t]
+    \vspace{-7mm}
+  
+  \begin{columns}[t]
+    % -------------------------------------------------------------------------
+    % LEFT MARGIN
+    % -------------------------------------------------------------------------
+    \begin{column}{0.025\paperwidth}\end{column}
+
+    % -------------------------------------------------------------------------
+    % LEFT COLUMN
+    % -------------------------------------------------------------------------
+    \begin{column}{0.46\paperwidth}
+      \begin{block}{Music AI Evaluation: Current State}
+      \end{block}
+
+      \begin{block}{Evaluation Crisis in Generative Music}
+          The current state of evaluation in generative music is methodologically fragmented, relies on ambiguous validation objectives, and builds on systematically misaligned metrics \cite{lerch_survey_2025}. This has led to a crisis in the field, where the following failures are observed:
+        
+        \begin{itemize}
+          \bigskip
+          \item \textbf{Validity failure:}
+              \begin{itemize}
+                \item Utilized metrics are \textit{unreliable proxies} and fail to measure musical qualities.
+              \end{itemize}
+          \bigskip
+          \item \textbf{Leaderboard failure:} 
+              \begin{itemize}
+                \item Single-score optimization leads to \textit{overfitting} and is \textit{insufficient for assessing a multi-dimensional cultural artifact}.
+              \end{itemize}
+          \bigskip
+          \item \textbf{Comparability failure:} 
+              \begin{itemize}
+                \item \textit{Different metrics, feature representations, and reference data} prevent meaningful comparisons across models.
+              \end{itemize}
+          \bigskip
+          \item \textbf{Reproducibility failure:}
+             \begin{itemize}
+                \item \textit{Closed-source representations and evaluation scripts} and proprietary data hinder reproducibility.
+              \end{itemize}
+          \bigskip
+          \item \textbf{Governance failure:} 
+             \begin{itemize}
+                \item \textit{Ad-hoc, fragmented evaluation protocols} indicate lack of standardization.
+              \end{itemize}
+        \end{itemize}
+
+      \end{block}
+
+      \begin{block}{Goals of the Proposed Framework}
+        \begin{itemize}
+          \bigskip
+          \item \textbf{Community-driven ecosystem governance:}
+              \begin{itemize}
+                \item 
+              \end{itemize}
+          \bigskip
+          \item \textbf{Multi-dimensional evaluation:} 
+              \begin{itemize}
+                \item 
+              \end{itemize}
+          \bigskip
+          \item \textbf{Interpretability:} 
+              \begin{itemize}
+                \item \textit{} 
+              \end{itemize}
+          \bigskip
+          \item \textbf{Domain adaptability:}
+             \begin{itemize}
+                \item \textit{}
+              \end{itemize}
+          \bigskip
+          \item \textbf{Reproducibility \& transparency:} 
+             \begin{itemize}
+                \item \textit{}
+              \end{itemize}
+        \end{itemize}
+
+      \end{block}
+    \end{column}
+    
+    % -------------------------------------------------------------------------
+    % MIDDLE SPACER
+    % -------------------------------------------------------------------------
+    \begin{column}{0.025\paperwidth}\end{column}
+    
+    % -------------------------------------------------------------------------
+    % RIGHT COLUMN
+    % -------------------------------------------------------------------------
+    \begin{column}{0.46\paperwidth}
+      \begin{block}{Architecture}
+          \begin{figure}[!h]
+            \centering
+            \resizebox{.9\linewidth}{!}{\input{flowchart.tex}}
+            \caption{Proposed architecture for a post-leaderboard evaluation framework for generative music.}
+          \end{figure}
+        
+        \vskip2ex
+        \begin{itemize}
+          \item \textbf{Reference Benchmark Profiles (RBPs):}
+          \item \textbf{Standardized Reference Data:} 
+          \item \textbf{Standardized Feature Representations:} 
+          \item \textbf{Standardized Distance Metrics:} 
+          \item \textbf{Multi-dimensional Results \& Visualization:}
+          \item \textbf{Logging:}
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{Governance Structure}
+      \end{block}
+
+      \begin{block}{Limitations}
+        \begin{itemize}
+          \item Focus on system output:
+              \begin{itemize}
+                \item no usability or user experience evaluation
+                \item no evaluation of the underlying model architecture
+                \item no distinction between human contributions and fully machine-generated output
+              \end{itemize}
+          \bigskip
+          \item current scope only on objective evaluation of musical output, no subjective evaluation
+          \item no evaluation of
+              \begin{itemize}
+                \item explainability
+                \item bias
+                \item ehtical use of data
+                \item resource usage
+              \end{itemize}
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{References}
+        \footnotesize
+        \bibliographystyle{plain}
+        \bibliography{2026-AI-Benchmark}
+
+        % \vskip1ex
+        % \scriptsize \color{GTGrayMatter}
+        % Acknowledgment: This production environment was developed inside the ECE Senior Design and Research ecosystems at Georgia Institute of Technology.
+      \end{block}
+    \end{column}
+    
+    % -------------------------------------------------------------------------
+    % RIGHT MARGIN
+    % -------------------------------------------------------------------------
+    \begin{column}{0.025\paperwidth}\end{column} 
+  \end{columns}
+\end{frame}
+\end{document}

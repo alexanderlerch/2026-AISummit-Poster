@@ -1,0 +1,84 @@
+\setlength{\unitlength}{1mm}
+\tiny\relsize{-4}
+\begin{picture}(142, 56)
+  \setlength\fboxsep{0pt}
+    % --- COORDINATE DEFINITIONS ---
+    % Horizontal centers: C1=20, C2=65, C3=110, C4=155
+    % Vertical centers: Top=100, Gen=75, Mid=50, Ref=25, Log=5
+    
+    % --- BOX DIMENSIONS ---
+    % Standard Box: 30x16
+    
+    % 1. EVALUATION PROFILES (Top)
+    \put(0, 48){\colorbox{white!20}{\framebox(142, 8){(Governed) Reference Benchmark Profiles}}}
+    \put(33, 50){\includegraphics[scale=.2]{graph/rbp}}
+    
+    % 2. INPUT DATA (Left Column)
+		% \put(0, 12){\framebox(24, 32){Data}}
+  	\put(0, 12){\colorbox{gray!10}{\framebox(24, 32){Data}}}
+    \put(2, 34){\colorbox{white!20}{\framebox(20, 8){Reference}}}
+    \put(2, 14){\colorbox{white!20}{\framebox(20, 8){Generated}}}
+    \put(18, 29){\includegraphics[scale=.25]{graph/data}}
+    \put(18, 23){\includegraphics[scale=.25]{graph/data}}
+    
+    % 3. FEATURE EXTRACTION
+    \put(32, 12){\colorbox{white!20}{\framebox(24, 32){\shortstack{Feature\\Extraction}}}}
+    \put(42, 32){\includegraphics[scale=.2]{graph/featureextract}}
+    
+    % 4. DISTRIBUTION SYMBOL (Replacing the box)
+    % Drawing a Bell Curve
+    \put(65, 36){\qbezier(0,0)(5,10)(10,0)}
+    \put(66, 37){\qbezier(0,0)(5,10)(10,0)}
+    \put(67, 38){\qbezier(0,0)(5,10)(10,0)}
+    
+    \put(65, 16){\qbezier(0,0)(5,10)(10,0)}
+    \put(66, 17){\qbezier(0,0)(5,10)(10,0)}
+    \put(67, 18){\qbezier(0,0)(5,10)(10,0)}
+		%\put(65, 16){\qbezier(0,0)(7.5,15)(15,0)}
+    %\put(95, 50){\line(1,0){15}}
+    \put(64, 30){\makebox(13,0)[c]{ Distributions}}
+
+    % 5. DISTANCE METRIC
+    \put(86, 12){\colorbox{white!20}{\framebox(24, 32){\shortstack{Distance\\Metric}}}}
+    \put(96, 32){\includegraphics[scale=.2]{graph/distance}}
+    
+    % 6. VISUALIZATION (Right)
+    \put(118, 12){\colorbox{white!20}{\framebox(24, 32){\shortstack{Multidim. Eval.,\\Visualization}}}}
+    \put(128, 32){\includegraphics[scale=.2]{graph/visual}}
+    
+    % 7. LOGGING (Bottom)
+    \put(0, 0){\colorbox{white!20}{\framebox(110, 8){Logging (JSON, PDF, \ldots)}}}
+    \put(33, 3){\includegraphics[scale=.2]{graph/log}}
+
+    % --- ARROWS & CONNECTORS ---
+    
+    % Evaluation Profiles Downward Links
+    \put(12, 48){\vector(0,-1){4}}    % Ref -> Log
+    \put(44, 48){\vector(0,-1){4}}   % Feat -> Log
+    \put(98, 48){\vector(0,-1){4}}  % Metric -> Log
+    \put(130, 48){\vector(0,-1){4}}  % Metric -> Log
+      
+    % Main Pipeline Flow
+    {\linethickness{1.5pt}
+    \put(24, 38){\vector(1,0){8}}     % From ref Data
+    %\put(42.5, 75){\vector(1,-2){7.5}} % Slant to Feature Extraction
+    
+    \put(24, 18){\vector(1,0){8}}     % From gen Data
+    %\put(42.5, 25){\vector(1,2){7.5}}  % Slant to Feature Extraction
+
+    \put(56, 38){\vector(1,0){8}}     % From feat Data
+    \put(56, 18){\vector(1,0){8}}     % From feat Data
+
+    \put(78, 38){\vector(1,0){8}}     % From dist Data
+    \put(78, 18){\vector(1,0){8}}     % From dist Data
+
+    %\put(80, 50){\vector(1,0){15}}    % Feat -> Dist
+    %\put(110, 50){\vector(1,0){20}}   % Dist -> Metric
+    \put(110, 30){\vector(1,0){8}}  % Metric -> Viz
+    }
+    % Logging Downward Links
+    \put(12, 12){\vector(0,-1){4}}    % Ref -> Log
+    \put(44, 12){\vector(0,-1){4}}   % Feat -> Log
+    \put(98, 12){\vector(0,-1){4}}  % Metric -> Log
+
+\end{picture}
