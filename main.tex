@@ -49,8 +49,8 @@
     % LEFT COLUMN
     % -------------------------------------------------------------------------
     \begin{column}{0.46\paperwidth}
-      \begin{block}{Music AI Evaluation: Current State}
-      \end{block}
+      % \begin{block}{Music AI Evaluation: Current State}
+      % \end{block}
 
       \begin{block}{Evaluation Crisis in Generative Music}
           The current state of evaluation in generative music is methodologically fragmented, relies on ambiguous validation objectives, and builds on systematically misaligned metrics \cite{lerch_survey_2025}. This has led to a crisis in the field, where the following failures are observed:
@@ -90,30 +90,44 @@
           \bigskip
           \item \textbf{Community-driven ecosystem governance:}
               \begin{itemize}
-                \item 
+                \item coordinated by the community for the community. 
+                \item metrics and evaluation protocols have to \textit{evolve with the field}.
               \end{itemize}
           \bigskip
           \item \textbf{Multi-dimensional evaluation:} 
               \begin{itemize}
-                \item 
+                \item acknowledging the \textit{multi-dimensional nature of music}.
               \end{itemize}
           \bigskip
           \item \textbf{Interpretability:} 
               \begin{itemize}
-                \item \textit{} 
+                \item utilizing \textit{interpretable metrics} and features where possible.
               \end{itemize}
           \bigskip
           \item \textbf{Domain adaptability:}
              \begin{itemize}
-                \item \textit{}
+                \item acknowledging \textit{variety of use cases} through curated reference benchmark profiles (RBPs).
+              \end{itemize}
+          \bigskip
+          \item \textbf{Modularity \& extensibility:} 
+             \begin{itemize}
+                \item modular software architecture allows for easy \textit{integration of new features and evaluation methods}.
               \end{itemize}
           \bigskip
           \item \textbf{Reproducibility \& transparency:} 
              \begin{itemize}
-                \item \textit{}
+                \item versioned \textit{open source} software with comprehensive documentation and \textit{auditable logging}.
               \end{itemize}
         \end{itemize}
 
+      \end{block}
+
+      \begin{block}{Governance Structure}
+          \begin{figure}[!h]
+            \centering
+            \resizebox{.9\linewidth}{!}{\input{governance.tex}}
+            \caption{Proposed governance structure}
+          \end{figure}
       \end{block}
     \end{column}
     
@@ -130,41 +144,75 @@
           \begin{figure}[!h]
             \centering
             \resizebox{.9\linewidth}{!}{\input{flowchart.tex}}
-            \caption{Proposed architecture for a post-leaderboard evaluation framework for generative music.}
+            \caption{Proposed framework architecture for the evaluation of generative music.}
           \end{figure}
         
         \vskip2ex
         \begin{itemize}
           \item \textbf{Reference Benchmark Profiles (RBPs):}
+              \begin{itemize}
+                \item use-case specific combination of \textit{reference data}, \textit{feature representations}, and \textit{distance metrics}, and \textit{reporting format}.
+              \end{itemize}
+          \bigskip
           \item \textbf{Standardized Reference Data:} 
+              \begin{itemize}
+                \item publicly available, documented datasets as controllable open references.
+              \end{itemize}
+          \bigskip
           \item \textbf{Standardized Feature Representations:} 
+              \begin{itemize}
+                \item musical qualities
+                \item audio fidelity
+                \item controllability
+                \item originality
+              \end{itemize}
+          \bigskip
           \item \textbf{Standardized Distance Metrics:} 
+              \begin{itemize}
+                \item distributional distance metrics (Wasserstein, KL, MMD, etc.)
+                \item traditional evaluation metrics (accuracy, precision, recall, F1, etc.) for classification tasks
+                \item task-specific metrics as needed
+              \end{itemize}
+          \bigskip
           \item \textbf{Multi-dimensional Results \& Visualization:}
-          \item \textbf{Logging:}
+              \bigskip
+              
+              \begin{figure}[!h]
+                \centering
+                \includegraphics[width=.5\linewidth]{graph/Mockup.pdf}
+                \caption{Mockup of aggregated result presentation.}
+              \end{figure}
+'           \bigskip
+            \item \textbf{Logging:}
+              \begin{itemize}
+                \item auditable logs (machine \& human readable formats) with RBP, version info, test data, etc.
+              \end{itemize}
         \end{itemize}
-      \end{block}
-
-      \begin{block}{Governance Structure}
       \end{block}
 
       \begin{block}{Limitations}
         \begin{itemize}
-          \item Focus on system output:
+            \item Missing \textbf{subjective evaluation protocols}
+            \bigskip
+            \item \textbf{Black-box evaluation}:
+              \begin{itemize}
+                  \item no evaluation of the underlying model architecture/capabilities
+                  \item no distinction between human contributions and fully machine-generated output
+              \end{itemize}
+           \bigskip
+            \item \textbf{Focus on output qualities}:
               \begin{itemize}
                 \item no usability or user experience evaluation
-                \item no evaluation of the underlying model architecture
-                \item no distinction between human contributions and fully machine-generated output
-              \end{itemize}
-          \bigskip
-          \item current scope only on objective evaluation of musical output, no subjective evaluation
-          \item no evaluation of
-              \begin{itemize}
-                \item explainability
-                \item bias
-                \item ehtical use of data
-                \item resource usage
+                \item no evaluation other characteristics, such as explainability, bias, resource usage, ethical use of data, etc.
               \end{itemize}
         \end{itemize}
+      \end{block}
+
+      \begin{block}{Cross-Domain Applicability}
+          \begin{itemize}
+            \item easily transferable to other domains of generative AI, such as \textbf{Visual Art}, \textbf{Text Generation}, and \textbf{Game Content Generation}
+            \item modular architecture $\Rightarrow$ \textbf{exchange feature representations}.
+          \end{itemize}
       \end{block}
 
       \begin{block}{References}

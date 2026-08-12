@@ -1,0 +1,53 @@
+\setlength{\unitlength}{1mm}
+\tiny\relsize{-4}
+\begin{picture}(91, 46)
+  \setlength\fboxsep{0pt}
+    % --- COORDINATE DEFINITIONS ---
+    % Horizontal centers: C1=20, C2=65, C3=110, C4=155
+    % Vertical centers: Top=100, Gen=75, Mid=50, Ref=25, Log=5
+    
+    % --- BOX DIMENSIONS ---
+    % Standard Box: 30x16
+    
+    % 1. Top
+    \put(0, 26){\colorbox{white!20}{\framebox(91, 20){\shortstack{\textbf{Steering Committee}\\
+      {\tiny\relsize{-6} overseeing framework development and maintenance,}\\ 
+      {\tiny\relsize{-6} monitoring evaluation landscape,}\\ 
+      {\tiny\relsize{-6} conducting ethics and IP reviews}}}}}
+    
+    % 2. TC
+		% \put(0, 12){\framebox(24, 32){Data}}
+  	\put(0, 0){\colorbox{white!20}{\framebox(24, 20){\shortstack{\textbf{Technical}\\ \textbf{Working Group}\\
+      {\tiny\relsize{-6} maintains software,}\\ 
+      {\tiny\relsize{-6} reproductibility reqs.}}}}}
+     
+    % 3. DPG
+    \put(32, 0){\colorbox{white!20}{\framebox(24, 20){\shortstack{Domain\\Profile Groups}}}}
+    \put(33, 1){\colorbox{white!20}{\framebox(24, 20){\shortstack{Domain\\Profile Groups}}}}
+    \put(34, 2){\colorbox{white!20}{\framebox(24, 20){\shortstack{Domain\\Profile Groups}}}}
+    \put(35, 3){\colorbox{white!20}{\framebox(24, 20){\shortstack{\textbf{Domain}\\\textbf{Profile Groups}\\
+      {\tiny\relsize{-6} propose \& develop}\\ 
+      {\tiny\relsize{-6} RBPs}}}}}
+    
+    % 4. Community Review
+    \put(67, 0){\colorbox{white!20}{\framebox(24, 20){\shortstack{\textbf{Community}\\\textbf{Review Process}\\
+      {\tiny\relsize{-6} proposal,}\\ 
+      {\tiny\relsize{-6} public comment,}\\ 
+      {\tiny\relsize{-6} depreciation policy.}}}}}
+    
+    % --- ARROWS & CONNECTORS ---
+    
+    % Evaluation Profiles Downward Links
+    \put(12, 20){\vector(0,1){6}}    % Ref -> Log
+    \put(44, 23){\vector(0,1){3}}   % Feat -> Log
+     
+    % Main Pipeline Flow
+    {\linethickness{1.5pt}
+    
+     \put(24,12){\vector(1,0){8}}     % From gen Data
+    
+     \put(59, 16){\vector(1,0){8}}     % From feat Data
+     \put(67, 8){\vector(-1,0){8}}     % From feat Data
+    
+    }
+\end{picture}
