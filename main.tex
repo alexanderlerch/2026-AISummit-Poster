@@ -37,7 +37,7 @@
 % =============================================================================
 \begin{document}
 \begin{frame}[t]
-    \vspace{-7mm}
+    \vspace{-10mm}
   
   \begin{columns}[t]
     % -------------------------------------------------------------------------
@@ -53,7 +53,7 @@
       % \end{block}
 
       \begin{block}{Evaluation Crisis in Generative Music}
-          The current state of evaluation in generative music is methodologically fragmented, relies on ambiguous validation objectives, and builds on systematically misaligned metrics \cite{lerch_survey_2025}. This has led to a crisis in the field, where the following failures are observed:
+          The current state of evaluation in generative music is \textbf{methodologically fragmented}, relies on \textbf{ambiguous validation objectives}, and builds on \textbf{systematically misaligned metrics} \cite{lerch_survey_2025}. This has led to a crisis in the field, where the following failures are observed:
         
         \begin{itemize}
           \bigskip
@@ -129,6 +129,20 @@
             \caption{Proposed governance structure}
           \end{figure}
       \end{block}
+
+      \begin{block}{Cross-Domain Applicability}
+          \begin{itemize}
+            \item modular architecture $\Rightarrow$ easily transferable to other domains of generative AI by \textbf{replacing feature representations}; 
+             candidates are
+            \smallskip
+            \begin{itemize}
+              \item \textit{Visual Art}
+              \item \textit{Text Generation}
+              \item \textit{Game Content Generation}
+            \end{itemize}
+          \end{itemize}
+      \end{block}
+
     \end{column}
     
     % -------------------------------------------------------------------------
@@ -140,7 +154,7 @@
     % RIGHT COLUMN
     % -------------------------------------------------------------------------
     \begin{column}{0.46\paperwidth}
-      \begin{block}{Architecture}
+      \begin{block}{Software Architecture}
           \begin{figure}[!h]
             \centering
             \resizebox{.9\linewidth}{!}{\input{flowchart.tex}}
@@ -151,15 +165,21 @@
         \begin{itemize}
           \item \textbf{Reference Benchmark Profiles (RBPs):}
               \begin{itemize}
-                \item use-case specific combination of \textit{reference data}, \textit{feature representations}, and \textit{distance metrics}, and \textit{reporting format}.
+                \item use-case specific combination of 
+                  \begin{itemize}
+                    \item \textit{reference data}
+                    \item \textit{feature representations}
+                    \item \textit{distance metrics}
+                    \item \textit{reporting format}
+                  \end{itemize}
               \end{itemize}
           \bigskip
-          \item \textbf{Standardized Reference Data:} 
+          \item \textbf{Standardized reference data:} 
               \begin{itemize}
                 \item publicly available, documented datasets as controllable open references.
               \end{itemize}
           \bigskip
-          \item \textbf{Standardized Feature Representations:} 
+          \item \textbf{Standardized feature representations:} 
               \begin{itemize}
                 \item musical qualities
                 \item audio fidelity
@@ -167,22 +187,22 @@
                 \item originality
               \end{itemize}
           \bigskip
-          \item \textbf{Standardized Distance Metrics:} 
+          \item \textbf{Standardized distance metrics:} 
               \begin{itemize}
                 \item distributional distance metrics (Wasserstein, KL, MMD, etc.)
                 \item traditional evaluation metrics (accuracy, precision, recall, F1, etc.) for classification tasks
                 \item task-specific metrics as needed
               \end{itemize}
           \bigskip
-          \item \textbf{Multi-dimensional Results \& Visualization:}
+          \item \textbf{Multi-dimensional results \& visualization:}
+              \bigskip
               \bigskip
               
               \begin{figure}[!h]
                 \centering
-                \includegraphics[width=.5\linewidth]{graph/Mockup.pdf}
+                \includegraphics[width=.6\linewidth]{graph/Mockup.pdf}
                 \caption{Mockup of aggregated result presentation.}
               \end{figure}
-'           \bigskip
             \item \textbf{Logging:}
               \begin{itemize}
                 \item auditable logs (machine \& human readable formats) with RBP, version info, test data, etc.
@@ -206,13 +226,6 @@
                 \item no evaluation other characteristics, such as explainability, bias, resource usage, ethical use of data, etc.
               \end{itemize}
         \end{itemize}
-      \end{block}
-
-      \begin{block}{Cross-Domain Applicability}
-          \begin{itemize}
-            \item easily transferable to other domains of generative AI, such as \textbf{Visual Art}, \textbf{Text Generation}, and \textbf{Game Content Generation}
-            \item modular architecture $\Rightarrow$ \textbf{exchange feature representations}.
-          \end{itemize}
       \end{block}
 
       \begin{block}{References}
