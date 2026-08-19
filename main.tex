@@ -37,7 +37,21 @@
 % =============================================================================
 \begin{document}
 \begin{frame}[t]
-    \vspace{-10mm}
+    \vspace{-14mm}
+
+  \begin{columns}[t]
+    \begin{column}{0.025\paperwidth}\end{column}
+    \begin{column}{0.945\paperwidth}
+  \begin{block}{TL;DR}
+    \begin{center}
+      A community-governed, multi-dimensional evaluation ecosystem for music AI replacing static leaderboards with transparent, reproducible \textit{benchmark profiles}.
+    \end{center}
+  \end{block}\vspace{-2ex}
+    \begin{beamercolorbox}[wd=\columnwidth,ht=.2ex]{headline accent}\end{beamercolorbox}
+  \end{column}
+
+    \begin{column}{0.025\paperwidth}\end{column} 
+  \end{columns}
   
   \begin{columns}[t]
     % -------------------------------------------------------------------------
@@ -52,77 +66,77 @@
       % \begin{block}{Music AI Evaluation: Current State}
       % \end{block}
 
-      \begin{block}{Evaluation Crisis in Generative Music}
-          The current state of evaluation in generative music is \textbf{methodologically fragmented}, relies on \textbf{ambiguous validation objectives}, and builds on \textbf{systematically misaligned metrics} \cite{lerch_survey_2025}. This has led to a crisis in the field, where the following failures are observed:
+      \begin{block}{Problem: Evaluation Crisis}
+          Generative music evaluation is \textbf{methodologically fragmented}, relies on \textbf{ambiguous validation objectives}, and builds on \textbf{systematically misaligned metrics} \cite{lerch_survey_2025}. %This has led to a crisis in the field, where the following failures are observed:
         
         \begin{itemize}
           \bigskip
-          \item \textbf{Validity failure:}
-              \begin{itemize}
-                \item Utilized metrics are \textit{unreliable proxies} and fail to measure musical qualities.
-              \end{itemize}
+          \item \textbf{Validity failure:} metrics poorly capture musical qualities.
+              % \begin{itemize}
+              %   \item Utilized metrics are \textit{unreliable proxies} and fail to measure musical qualities.
+              % \end{itemize}
           \bigskip
-          \item \textbf{Leaderboard failure:} 
-              \begin{itemize}
-                \item Single-score optimization leads to \textit{overfitting} and is \textit{insufficient for assessing a multi-dimensional cultural artifact}.
-              \end{itemize}
+          \item \textbf{Leaderboard failure:}  single scores encourage optimization artifacts and obscure musical multi-dimensionality.
+              % \begin{itemize}
+              %   \item Single-score optimization leads to \textit{overfitting} and is \textit{insufficient for assessing a multi-dimensional cultural artifact}.
+              % \end{itemize}
           \bigskip
-          \item \textbf{Comparability failure:} 
-              \begin{itemize}
-                \item \textit{Different metrics, feature representations, and reference data} prevent meaningful comparisons across models.
-              \end{itemize}
+          \item \textbf{Comparability failure:} different evaluation pipelines yield incomparable results.
+              % \begin{itemize}
+              %   \item \textit{Different metrics, feature representations, and reference data} prevent meaningful comparisons across models.
+              % \end{itemize}
           \bigskip
-          \item \textbf{Reproducibility failure:}
-             \begin{itemize}
-                \item \textit{Closed-source representations and evaluation scripts} and proprietary data hinder reproducibility.
-              \end{itemize}
+          \item \textbf{Reproducibility failure:} proprietary data and tools limit verification.
+            %  \begin{itemize}
+            %     \item \textit{Closed-source representations and evaluation scripts} and proprietary data hinder reproducibility.
+            %   \end{itemize}
           \bigskip
-          \item \textbf{Governance failure:} 
-             \begin{itemize}
-                \item \textit{Ad-hoc, fragmented evaluation protocols} indicate lack of standardization.
-              \end{itemize}
+          \item \textbf{Governance failure:} no shared standards or process for evolution.
+              % \begin{itemize}
+              %   \item \textit{Ad-hoc, fragmented evaluation protocols} indicate lack of standardization.
+              % \end{itemize}
         \end{itemize}
 
       \end{block}
 
-      \begin{block}{Goals of the Proposed Framework}
+      \begin{block}{Core Ideas}
         \begin{itemize}
           \bigskip
-          \item \textbf{Community-driven ecosystem governance:}
-              \begin{itemize}
-                \item coordinated by the community for the community. 
-                \item metrics and evaluation protocols have to \textit{evolve with the field}.
-              \end{itemize}
+          \item \textbf{Community governance:} \textit{community-maintained evolving benchmarks} and evaluation standards.
+              % \begin{itemize}
+              %   \item coordinated by the community for the community. 
+              %   \item metrics and evaluation protocols have to \textit{evolve with the field}.
+              % \end{itemize}
           \bigskip
-          \item \textbf{Multi-dimensional evaluation:} 
-              \begin{itemize}
-                \item acknowledging the \textit{multi-dimensional nature of music}.
-              \end{itemize}
+          \item \textbf{Multi-dimensional assessment:} capture many \textit{relevant dimensions} instead one single ambiguous score.
+              % \begin{itemize}
+              %   \item acknowledging the \textit{multi-dimensional nature of music}.
+              % \end{itemize}
           \bigskip
-          \item \textbf{Interpretability:} 
-              \begin{itemize}
-                \item utilizing \textit{interpretable metrics} and features where possible.
-              \end{itemize}
+          \item \textbf{Interpretability:} utilize \textit{interpretable metrics} and features.
+              % \begin{itemize}
+              %   \item utilizing \textit{interpretable metrics} and features where possible.
+              % \end{itemize}
           \bigskip
-          \item \textbf{Domain adaptability:}
-             \begin{itemize}
-                \item acknowledging \textit{variety of use cases} through curated reference benchmark profiles (RBPs).
-              \end{itemize}
+          \item \textbf{Use-case adaptability:} tailor curated \textit{reference benchmark profiles (RBPs)} to specific musical contexts.
+              % \begin{itemize}
+              %   \item acknowledging \textit{variety of use cases} through curated reference benchmark profiles (RBPs).
+              % \end{itemize}
+           \bigskip
+          \item \textbf{Modular, extensible architecture:} new metrics, features, and data can be \textit{integrated without redesign}.
+            %  \begin{itemize}
+            %     \item modular software architecture allows for easy \textit{integration of new features and evaluation methods}.
+            %   \end{itemize}
           \bigskip
-          \item \textbf{Modularity \& extensibility:} 
-             \begin{itemize}
-                \item modular software architecture allows for easy \textit{integration of new features and evaluation methods}.
-              \end{itemize}
-          \bigskip
-          \item \textbf{Reproducibility \& transparency:} 
-             \begin{itemize}
-                \item versioned \textit{open source} software with comprehensive documentation and \textit{auditable logging}.
-              \end{itemize}
+          \item \textbf{Reproducibility \& transparency:} versioned, documented \textit{open source} software with \textit{auditable logging}.
+            %  \begin{itemize}
+            %     \item versioned, documented \textit{open source} software with \textit{auditable logging}.
+            %   \end{itemize}
         \end{itemize}
 
       \end{block}
 
-      \begin{block}{Governance Structure}
+      \begin{block}{Governance}
           \begin{figure}[!h]
             \centering
             \resizebox{.9\linewidth}{!}{\input{governance.tex}}
@@ -130,15 +144,16 @@
           \end{figure}
       \end{block}
 
-      \begin{block}{Cross-Domain Applicability}
+      \begin{block}{Beyond Music}
           \begin{itemize}
             \item modular architecture $\Rightarrow$ easily transferable to other domains of generative AI by \textbf{replacing feature representations}; 
              candidates are
             \smallskip
             \begin{itemize}
-              \item \textit{Visual Art}
-              \item \textit{Text Generation}
-              \item \textit{Game Content Generation}
+              \item \textit{Visual art}
+              \item \textit{Text generation}
+              \item \textit{Game content generation}
+              \item \textit{Video generation}
             \end{itemize}
           \end{itemize}
       \end{block}
@@ -154,7 +169,7 @@
     % RIGHT COLUMN
     % -------------------------------------------------------------------------
     \begin{column}{0.46\paperwidth}
-      \begin{block}{Software Architecture}
+      \begin{block}{Framework Architecture}
           \begin{figure}[!h]
             \centering
             \resizebox{.9\linewidth}{!}{\input{flowchart.tex}}
@@ -163,35 +178,35 @@
         
         \vskip2ex
         \begin{itemize}
-          \item \textbf{Reference Benchmark Profiles (RBPs):}
-              \begin{itemize}
-                \item use-case specific combination of 
+          \item \textbf{Reference Benchmark Profiles (RBPs):} versioned evaluation configurations specifying
+              % \begin{itemize}
+              %   \item use-case specific combination of 
                   \begin{itemize}
                     \item \textit{reference data}
                     \item \textit{feature representations}
                     \item \textit{distance metrics}
                     \item \textit{reporting format}
                   \end{itemize}
-              \end{itemize}
+              % \end{itemize}
           \bigskip
-          \item \textbf{Standardized reference data:} 
-              \begin{itemize}
-                \item publicly available, documented datasets as controllable open references.
-              \end{itemize}
+          \item \textbf{Standardized reference data:} publicly available, documented datasets as controllable open references.
+              % \begin{itemize}
+              %   \item publicly available, documented datasets as controllable open references.
+              % \end{itemize}
           \bigskip
-          \item \textbf{Standardized feature representations:} 
-              \begin{itemize}
-                \item musical qualities
-                \item audio fidelity
-                \item controllability
-                \item originality
-              \end{itemize}
-          \bigskip
+          \item \textbf{Standardized feature representations:} for musical qualities, audio fidelity, controllability, and originality.
+              % \begin{itemize}
+          %        \item musical qualities
+          %       \item audio fidelity
+          %       \item controllability
+          %       \item originality
+          %     \end{itemize}
+          % \bigskip
           \item \textbf{Standardized distance metrics:} 
               \begin{itemize}
                 \item distributional distance metrics (Wasserstein, KL, MMD, etc.)
-                \item traditional evaluation metrics (accuracy, precision, recall, F1, etc.) for classification tasks
-                \item task-specific metrics as needed
+                \item traditional evaluation metrics (accuracy, AUC, F1, etc.) for classification tasks
+                % \item task-specific metrics as needed
               \end{itemize}
           \bigskip
           \item \textbf{Multi-dimensional results \& visualization:}
@@ -200,16 +215,17 @@
               
               \begin{figure}[!h]
                 \centering
-                \includegraphics[width=.6\linewidth]{graph/Mockup.pdf}
+                \includegraphics[width=.9\linewidth]{graph/Mockup.pdf}
                 \caption{Mockup of aggregated result presentation.}
               \end{figure}
-            \item \textbf{Logging:}
-              \begin{itemize}
-                \item auditable logs (machine \& human readable formats) with RBP, version info, test data, etc.
-              \end{itemize}
+            \item \textbf{Logging:} auditable logs (machine \& human readable formats) with RBP, version info, test data, etc.
+              % \begin{itemize}
+              %   \item auditable logs (machine \& human readable formats) with RBP, version info, test data, etc.
+              % \end{itemize}
         \end{itemize}
       \end{block}
 
+      \vskip.3ex
       \begin{block}{Limitations}
         \begin{itemize}
             \item Missing \textbf{subjective evaluation protocols}
@@ -228,12 +244,14 @@
         \end{itemize}
       \end{block}
 
+      \vskip.3ex
       \begin{block}{References}
+        \vspace{-3mm}
         \footnotesize
         \bibliographystyle{plain}
         \bibliography{2026-AI-Benchmark}
 
-        % \vskip1ex
+        %  \vskip2.5ex % balance out lower block bound-----
         % \scriptsize \color{GTGrayMatter}
         % Acknowledgment: This production environment was developed inside the ECE Senior Design and Research ecosystems at Georgia Institute of Technology.
       \end{block}
